@@ -124,10 +124,18 @@ fun ProductivityList(productivityList: List<Productivity>, modifier: Modifier = 
     }
 }
 
-@Preview(showBackground = true)
+@Preview
 @Composable
 fun GreetingPreview() {
-    Unit3Pathway3ProductivityTheme {
+    Unit3Pathway3ProductivityTheme(darkTheme = false) {
+        ProductivityCard(Productivity(R.drawable.baseline_sports_esports_24, R.string.day1_head, R.string.day1))
+    }
+}
+
+@Preview
+@Composable
+fun GreetingPreviewDarkTheme() {
+    Unit3Pathway3ProductivityTheme(darkTheme = true) {
         ProductivityCard(Productivity(R.drawable.baseline_sports_esports_24, R.string.day1_head, R.string.day1))
     }
 }
