@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Unit3Pathway3Productivity</string>
 
-    <string name="app_name_for_top_app_bar">Productivity</string>
+    <string name="app_name_for_top_app_bar">Продуктивность</string>
 
     <string name="day1_number">День 1</string>
     <string name="day1_head">Планируй свой день заранее</string>

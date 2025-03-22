@@ -137,6 +137,8 @@ fun ProductivityList(productivityList: List<Productivity>, modifier: Modifier = 
 @Composable
 fun GreetingPreview() {
     Unit3Pathway3ProductivityTheme(darkTheme = false) {
+        //Превью всего списка
+
         ProductivityApp()
 //Превью одной карточки
 //        ProductivityCard(
