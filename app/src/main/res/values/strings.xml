@@ -1,93 +1,123 @@
 <resources>
     <string name="app_name">Unit3Pathway3Productivity</string>
 
+    <string name="day1_number">День 1</string>
     <string name="day1_head">Планируй свой день заранее</string>
     <string name="day1">создавай список задач накануне, чтобы начать утро с чёткого плана.</string>
 
+    <string name="day2_number">День 2</string>
     <string name="day2_head">Планируй свой день заранее</string>
     <string name="day2">работай 25 минут, а затем делай перерыв в 5 минут.</string>
 
+    <string name="day3_number">День 3</string>
     <string name="day3_head">Практикуй благодарность</string>
     <string name="day3">отмечай даже маленькие успехи, это повысит твою мотивацию.</string>
 
+    <string name="day4_number">День 4</string>
     <string name="day4_head">Разделяй большие задачи на мелкие</string>
     <string name="day4">деление задач на более мелкие части делает их более управляемыми.</string>
 
+    <string name="day5_number">День 5</string>
     <string name="day5_head">Устраивай утренний ритуал</string>
     <string name="day5">начни день с утренней рутины (зарядка, завтрак, медитация), чтобы настроиться на продуктивность.</string>
 
+    <string name="day6_number">День 6</string>
     <string name="day6_head">Убирай отвлекающие факторы</string>
     <string name="day6">выключи уведомления на телефоне и убери все ненужные предметы с рабочего места.</string>
 
+    <string name="day7_number">День 7</string>
     <string name="day7_head">Используй приложения для задач</string>
     <string name="day7">приложения вроде Todoist или Trello помогут организовать работу.</string>
 
+    <string name="day8_number">День 8</string>
     <string name="day8_head">Работай с максимальной энергией</string>
     <string name="day8">выяви, в какое время суток ты наиболее продуктивен, и выполняй самые важные задачи именно тогда.</string>
 
+    <string name="day9_number">День 9</string>
     <string name="day9_head">Вдохновляйся другими</string>
     <string name="day9">читай книги или смотрите видео о продуктивности, чтобы черпать новые идеи.</string>
 
+    <string name="day10_number">День 10</string>
     <string name="day10_head">Питайся правильно</string>
     <string name="day10">правильное питание способствует улучшению концентрации и энергии.</string>
 
+    <string name="day11_number">День 11</string>
     <string name="day11_head">Создавай тайм-блоки</string>
     <string name="day11">выделяй конкретное время для каждой задачи, чтобы избежать прокрастинации.</string>
 
+    <string name="day12_number">День 12</string>
     <string name="day12_head">Не откладывай на завтра</string>
     <string name="day12">выполняй задачи, которые можно сделать за 5 минут, сразу.</string>
 
+    <string name="day13_number">День 13</string>
     <string name="day13_head">Ставь SMART-цели</string>
     <string name="day13">цели должны быть конкретными, измеримыми, достижимыми, актуальными и ограниченными по времени.</string>
 
+    <string name="day14_number">День 14</string>
     <string name="day14_head">Следи за своим прогрессом</string>
     <string name="day14">фиксируй результаты и анализируй, что удалось, а что нет.</string>
 
+    <string name="day15_number">День 15</string>
     <string name="day15_head">Перерывы — не роскошь, а необходимость</string>
     <string name="day15">отдых помогает восстанавливать силы и увеличивать продуктивность.</string>
 
+    <string name="day16_number">День 16</string>
     <string name="day16_head">Работай по методу "2 минут"</string>
     <string name="day16">если задачу можно выполнить за 2 минуты, сделай её сразу, чтобы не откладывать.</string>
 
+    <string name="day17_number">День 17</string>
     <string name="day17_head">Используй правило 80/20</string>
     <string name="day17">сосредоточься на самых важных 20% задач, которые принесут 80% результатов.</string>
 
+    <string name="day18_number">День 18</string>
     <string name="day18_head">Чередуй задачи</string>
     <string name="day18">если работа над одной задачей затягивается, переключись на другую, чтобы не выгореть.</string>
 
+    <string name="day19_number">День 19</string>
     <string name="day19_head">Ограничь время на задачи</string>
     <string name="day19">поставь таймер и старайся завершить задачу в отведённое время.</string>
 
+    <string name="day20_number">День 20</string>
     <string name="day20_head">Создавай рабочие привычки</string>
     <string name="day20">установи регулярный график работы, чтобы автоматизировать действия.</string>
 
+    <string name="day21_number">День 21</string>
     <string name="day21_head">Оценивай приоритеты</string>
     <string name="day21">всегда начинай с самых важных и трудных задач.</string>
 
+    <string name="day22_number">День 22</string>
     <string name="day22_head">Отказ от многозадачности</string>
     <string name="day22">сосредотачивайся на одной задаче, чтобы делать её быстрее и качественнее.</string>
 
+    <string name="day23_number">День 23</string>
     <string name="day23_head">Медитируй</string>
     <string name="day23">короткие медитации помогают очистить ум и повысить концентрацию.</string>
 
+    <string name="day24_number">День 24</string>
     <string name="day24_head">Занимайся физической активностью</string>
     <string name="day24">регулярные тренировки помогают поддерживать высокую продуктивность.</string>
 
+    <string name="day25_number">День 25</string>
     <string name="day25_head">Используй методы визуализации</string>
     <string name="day25">визуализируй свою цель и шаги к её достижению.</string>
 
+    <string name="day26_number">День 26</string>
     <string name="day26_head">Развивай привычку заканчивать начатое</string>
     <string name="day26">не откладывай задачи на потом, завершай их, чтобы почувствовать удовлетворение.</string>
 
+    <string name="day27_number">День 27</string>
     <string name="day27_head">Избегай перфекционизма</string>
     <string name="day27">лучше сделать задачу хорошо, чем идеализировать её до бесконечности.</string>
 
+    <string name="day28_number">День 28</string>
     <string name="day28_head">Выспись</string>
     <string name="day28">качественный сон значительно влияет на продуктивность.</string>
 
+    <string name="day29_number">День 29</string>
     <string name="day29_head">Упрощай процессы</string>
     <string name="day29">ищи способы сократить время на выполнение рутинных задач.</string>
 
+    <string name="day30_number">День 30</string>
     <string name="day30_head">Окружай себя мотивирующими людьми</string>
     <string name="day30">общение с продуктивными людьми вдохновляет на действия.</string>
 </resources>

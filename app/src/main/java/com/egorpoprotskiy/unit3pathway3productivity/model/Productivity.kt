@@ -4,6 +4,8 @@ import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 
 data class Productivity(
+    @StringRes
+    val dayNumber: Int,
     @DrawableRes
     val iconId: Int,
     @StringRes

@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.WindowInsets
@@ -27,6 +28,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLayoutDirection
@@ -76,7 +78,18 @@ fun ProductivityApp() {
 //Создание макета одной карточки
 @Composable
 fun ProductivityCard(productivity: Productivity, modifier: Modifier = Modifier) {
-    Card(modifier = modifier) {
+    Card(
+        modifier = modifier
+//            .background(color = MaterialTheme.colorScheme.primary)
+    ) {
+        Text(
+            text = LocalContext.current.getString(productivity.dayNumber),
+            style = MaterialTheme.typography.labelLarge,
+            modifier = Modifier
+                .align(Alignment.CenterHorizontally),
+//                .padding(start = 20.dp)
+            fontSize = 20.sp
+        )
         Row {
             Image(
                 painter = painterResource(productivity.iconId), null,
@@ -128,7 +141,14 @@ fun ProductivityList(productivityList: List<Productivity>, modifier: Modifier = 
 @Composable
 fun GreetingPreview() {
     Unit3Pathway3ProductivityTheme(darkTheme = false) {
-        ProductivityCard(Productivity(R.drawable.baseline_sports_esports_24, R.string.day1_head, R.string.day1))
+        ProductivityCard(
+            Productivity(
+                R.string.day1_number,
+                R.drawable.baseline_sports_esports_24,
+                R.string.day1_head,
+                R.string.day1
+            )
+        )
     }
 }
 
@@ -136,6 +156,13 @@ fun GreetingPreview() {
 @Composable
 fun GreetingPreviewDarkTheme() {
     Unit3Pathway3ProductivityTheme(darkTheme = true) {
-        ProductivityCard(Productivity(R.drawable.baseline_sports_esports_24, R.string.day1_head, R.string.day1))
+        ProductivityCard(
+            Productivity(
+                R.string.day1_number,
+                R.drawable.baseline_sports_esports_24,
+                R.string.day1_head,
+                R.string.day1
+            )
+        )
     }
 }
