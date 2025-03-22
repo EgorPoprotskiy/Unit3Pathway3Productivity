@@ -5,34 +5,31 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.WindowInsets
-import androidx.compose.foundation.layout.asPaddingValues
-import androidx.compose.foundation.layout.calculateStartPadding
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.safeDrawing
-import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Card
+import androidx.compose.material3.CenterAlignedTopAppBar
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -59,19 +56,19 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun ProductivityApp() {
     val layoutDirection = LocalLayoutDirection.current
-    Surface(
-        modifier = Modifier
-            .fillMaxSize()
-            .statusBarsPadding()
-            .padding(
-                start = WindowInsets.safeDrawing.asPaddingValues()
-                    .calculateStartPadding(layoutDirection),
-                end = WindowInsets.safeDrawing.asPaddingValues()
-                    .calculateStartPadding(layoutDirection)
-            )
-    ) {
-//    ProductivityCard(productivity = Datasource().loadProductivity())
-        ProductivityList(productivityList = Datasource().loadProductivity())
+
+    Scaffold(
+        topBar = {
+            ProductivityTopAppBar()
+        }
+    ) { paddingValues ->
+        Surface(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(paddingValues) // Учитываем отступы от Scaffold
+        ) {
+            ProductivityList(productivityList = Datasource().loadProductivity())
+        }
     }
 }
 
@@ -87,7 +84,6 @@ fun ProductivityCard(productivity: Productivity, modifier: Modifier = Modifier) 
             style = MaterialTheme.typography.labelLarge,
             modifier = Modifier
                 .align(Alignment.CenterHorizontally),
-//                .padding(start = 20.dp)
             fontSize = 20.sp
         )
         Row {
@@ -141,14 +137,16 @@ fun ProductivityList(productivityList: List<Productivity>, modifier: Modifier = 
 @Composable
 fun GreetingPreview() {
     Unit3Pathway3ProductivityTheme(darkTheme = false) {
-        ProductivityCard(
-            Productivity(
-                R.string.day1_number,
-                R.drawable.baseline_sports_esports_24,
-                R.string.day1_head,
-                R.string.day1
-            )
-        )
+        ProductivityApp()
+//Превью одной карточки
+//        ProductivityCard(
+//            Productivity(
+//                R.string.day1_number,
+//                R.drawable.baseline_sports_esports_24,
+//                R.string.day1_head,
+//                R.string.day1
+//            )
+//        )
     }
 }
 
@@ -156,13 +154,30 @@ fun GreetingPreview() {
 @Composable
 fun GreetingPreviewDarkTheme() {
     Unit3Pathway3ProductivityTheme(darkTheme = true) {
-        ProductivityCard(
-            Productivity(
-                R.string.day1_number,
-                R.drawable.baseline_sports_esports_24,
-                R.string.day1_head,
-                R.string.day1
-            )
-        )
+        //Превью всего списка
+        ProductivityApp()
+//Превью одной карточки
+//        ProductivityCard(
+//            Productivity(
+//                R.string.day1_number,
+//                R.drawable.baseline_sports_esports_24,
+//                R.string.day1_head,
+//                R.string.day1
+//            )
+//        )
     }
+}
+
+//Создание верхней панели
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun ProductivityTopAppBar(modifier: Modifier = Modifier) {
+    CenterAlignedTopAppBar(
+        title = {
+            Text(
+                text = stringResource(R.string.app_name_for_top_app_bar)
+            )
+        },
+        modifier = modifier
+    )
 }
